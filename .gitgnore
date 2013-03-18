@@ -1,0 +1,6 @@
+venv
+*.pyc
+*.iml
+*.iws
+*.ipr
+.env

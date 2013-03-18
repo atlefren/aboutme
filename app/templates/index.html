@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Atle Frenvik Sveen</title>
+
+    {% block css %}
+    <link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static', filename='css/bootstrap/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static', filename='css/style.css') }}" />
+    {% endblock %}
+
+    {% block js %}
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.js"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='script/underscore-min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='script/backbone-min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='css/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='script/map.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='script/infoboxes.js') }}"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            blog.showMap({{pos|safe}});
+        });
+
+    </script>
+    {% endblock %}
+</head>
+<body>
+
+<div id="overlay">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="row-fluid">
+                    <div class="span12 infobox">
+                        <h2>Leser (på web)</h2>
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ul>
+
+                    </div><!--/span-->
+                </div>
+                <div class="row-fluid">
+                    <div class="span12 infobox">
+                        <h2>Kode</h2>
+                        <ul id="github">
+                        </ul>
+                    </div><!--/span-->
+                </div>
+                <div class="row-fluid">
+                    <div class="span12 infobox">
+                        <h2>Øl</h2>
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ul>
+                    </div><!--/span-->
+                </div>
+            </div><!--/span-->
+            <div class="span6">
+                <div class="hero-unit about">
+                    <h1>Atle Frenvik Sveen</h1>
+                    <p>En hurragutt med mye sprøtt i nøtta. GIS/IT menneske med skeptisk/ateistisk tilsnitt. Glad i øl, mat og ord.</p>
+
+                    <p>Her finner du noe av det som opptar meg på nett.</p>
+                </div>
+                <div class="row-fluid">
+                    <div class="span12 largebox">
+                        <h2>Blogger</h2>
+                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    </div><!--/span-->
+                </div>
+
+            </div><!--/span-->
+            <div class="span3">
+                <div class="row-fluid">
+                    <div class="span12 infobox">
+                        <h2>Twitter</h2>
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ul>
+                    </div><!--/span-->
+                </div>
+                <div class="row-fluid">
+                    <div class="span12 infobox">
+                        <h2>Leser (bøker)</h2>
+                        <ul id="librarything">
+                        </ul>
+                    </div><!--/span-->
+                </div>
+                <div class="row-fluid">
+                    <div class="span12 infobox">
+                        <h2>Bilder</h2>
+
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ul>
+                    </div><!--/span-->
+                </div>
+            </div><!--/span-->
+        </div><!--/row-->
+
+        <hr>
+
+        <footer>
+            <p>&copy; Atle Frenvik Sveen 2013</p>
+        </footer>
+
+    </div><!--/.fluid-container-->
+
+</div>
+
+<div id="map"></div>
+</body>
+</html>

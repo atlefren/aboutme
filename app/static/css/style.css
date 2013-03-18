@@ -1,0 +1,42 @@
+div.infobox h2 {
+    text-align: center;
+}
+
+div.infobox, div.largebox {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background-color: #eeeeee;
+    padding: 10px;
+    opacity:0.8;
+    margin-bottom: 10px;
+}
+
+div.about {
+    background-image:url('../img/foredrag_github.jpg');
+    background-position: 140px -60px;
+}
+
+div.about h1, div.about p {
+    color: #ffffff;
+    text-shadow: 2px 2px #000000;
+}
+
+div#overlay {
+    height:100%;
+    width:100%;
+    z-index: 2000;
+    top:0;
+    left: 0;
+    position: absolute;
+
+}
+
+div#map{
+    height:100%;
+    width:100%;
+}
+
+#map img{
+    max-width:none;
+}
